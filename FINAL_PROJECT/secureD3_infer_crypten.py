@@ -48,7 +48,7 @@ FLEXVIT_CONFIG = flexvit.ViTConfig(
     mlp_dims=(32 * 48, 40 * 48, 48 * 48, 56 * 48, 64 * 48),
 )
 
-CKPT_PATH = "../pretrained/FlexViT_5Levels_cosine.pt"
+CKPT_PATH = "../FlexViT_5Levels_cosine.pt"
 
 
 def now() -> float:
