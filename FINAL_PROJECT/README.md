@@ -1,14 +1,14 @@
 # Dynamic FlexViT Secure Inference with CrypTen (2-Party MPC)
 
 This repository provides an experimental framework for **secure and inference**
-**FlexViT (dynamic multi-level Vision Transformer)** models.
+**FlexViT** models.
 
 First of all you need to clone Flexvit from
 https://gitlab.com/R0b4/flexvit
 
-And then download the ImageNet pretraind endpoint(FlexViT_5Levels_cosine.pt)
-from the link i send it to you via Gmail wiht the final version of the thisis
-and but it in the main same folder as SecureD3_infer_crypten.py
+Then, download the ImageNet pretrained checkpoint (FlexViT_5Levels_cosine.pt) 
+from the link I sent you via Gmail with the final version of the thesis, 
+and place it in the same directory as SecureD3_infer_crypten.py.
 
 
 **`secureD3_infer_crypten.py`**
@@ -35,4 +35,3 @@ calling the main file directly.
 you can look at the results of my experments in the output folder
 
 Alos you need to take a look at the requirments.txt file
-
