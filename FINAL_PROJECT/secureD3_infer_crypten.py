@@ -6,16 +6,16 @@ Year: <2026>
 
 Description:
 This file implements experimental code for evaluating multi-level FlexViT
-inference under secure multi-party computation (MPC) using the CrypTen framework.
+inference under secure multi party computation MPC using the CrypTen framework.
 The code includes:
 - Plain (non-MPC) baseline inference and profiling
 - MPC inference using CrypTen
 - Communication cost measurement and bandwidth simulation
-- Optional per-layer and stage-wise profiling
+- Optional per layer and stage wise profiling
 
 Inspiration and Related Work:
 This implementation is inspired by and builds upon the following works and tools:
-- CrypTen: Privacy-preserving machine learning framework (Facebook Research)
+- CrypTen: Privacy preserving machine learning framework
 - FlexiViT / Vision Transformer architectures
 - PyTorch and torchvision utilities
 - fvcore FLOP analysis tools
