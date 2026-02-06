@@ -1,0 +1,15 @@
+mode,level,index,split,module,total_time_sec,avg_time_per_infer_sec,calls,acc1,pred,y_true
+plain_cpu_layer_profile,3,0,val,encoder_layer_0,0.06683893874287605,0.013367787748575211,7,0.0,394,0
+plain_cpu_layer_profile,3,0,val,encoder_layer_1,0.06473993696272373,0.012947987392544746,7,0.0,394,0
+plain_cpu_layer_profile,3,0,val,encoder_layer_10,0.06702670780941844,0.013405341561883688,7,0.0,394,0
+plain_cpu_layer_profile,3,0,val,encoder_layer_11,0.06483346177265048,0.012966692354530096,7,0.0,394,0
+plain_cpu_layer_profile,3,0,val,encoder_layer_2,0.06539012957364321,0.013078025914728642,7,0.0,394,0
+plain_cpu_layer_profile,3,0,val,encoder_layer_3,0.0648734443821013,0.012974688876420259,7,0.0,394,0
+plain_cpu_layer_profile,3,0,val,encoder_layer_4,0.06526396609842777,0.013052793219685555,7,0.0,394,0
+plain_cpu_layer_profile,3,0,val,encoder_layer_5,0.06482163071632385,0.01296432614326477,7,0.0,394,0
+plain_cpu_layer_profile,3,0,val,encoder_layer_6,0.06536543043330312,0.013073086086660624,7,0.0,394,0
+plain_cpu_layer_profile,3,0,val,encoder_layer_7,0.06479326961562037,0.012958653923124074,7,0.0,394,0
+plain_cpu_layer_profile,3,0,val,encoder_layer_8,0.0651777433231473,0.01303554866462946,7,0.0,394,0
+plain_cpu_layer_profile,3,0,val,encoder_layer_9,0.06490627350285649,0.012981254700571298,7,0.0,394,0
+plain_cpu_layer_profile,3,0,val,head,0.00129236513748765,0.00025847302749752997,7,0.0,394,0
+plain_cpu_layer_profile,3,0,val,patch_embed_conv_proj,0.003400981891900301,0.0006801963783800602,7,0.0,394,0

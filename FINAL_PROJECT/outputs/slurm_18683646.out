@@ -1,0 +1,74 @@
+Date: Mon Jan 26 11:58:27 CET 2026
+Node: gcn30.local.snellius.surf.nl
+CPUs: 8
+Mon Jan 26 11:58:27 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.95.05              Driver Version: 580.95.05      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:31:00.0 Off |                    0 |
+| N/A   30C    P0             49W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+[plain] device=cuda
+[plain] level=0 sec/iter=0.0064 acc1=1.0
+[plain] level=1 sec/iter=0.0068 acc1=1.0
+[plain] level=2 sec/iter=0.0068 acc1=1.0
+[plain] wrote outputs/results_plain_idx0.csv
+Process Process-1:
+Process Process-2:
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/crypten/mpc/context.py", line 29, in _launch
+    crypten.init()
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/crypten/mpc/context.py", line 29, in _launch
+    crypten.init()
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/crypten/__init__.py", line 77, in init
+    _setup_prng()
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/crypten/__init__.py", line 202, in _setup_prng
+    generators[key][device] = torch.Generator(device=device)
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/crypten/__init__.py", line 77, in init
+    _setup_prng()
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/crypten/__init__.py", line 202, in _setup_prng
+    generators[key][device] = torch.Generator(device=device)
+RuntimeError: CUDA error: initialization error
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+RuntimeError: CUDA error: initialization error
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+ERROR:root:One of the parties failed. Check past logs

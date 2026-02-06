@@ -1,0 +1,49 @@
+Date: Fri Jan 23 20:58:33 CET 2026
+Node: gcn47.local.snellius.surf.nl
+CPUs: 8
+Fri Jan 23 20:58:33 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.95.05              Driver Version: 580.95.05      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:E3:00.0 Off |                    0 |
+| N/A   29C    P0             50W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/crypten/nn/onnx_converter.py:176: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755883846/work/torch/csrc/utils/tensor_numpy.cpp:178.)
+  param = torch.from_numpy(numpy_helper.to_array(node))
+/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/crypten/nn/onnx_converter.py:176: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755883846/work/torch/csrc/utils/tensor_numpy.cpp:178.)
+  param = torch.from_numpy(numpy_helper.to_array(node))
+MPC ok: world_size=2, x_enc_type=MPCTensor, src=0
+Level 0 | time=511.78s | comm≈10.49 GB | calls=3481
+Level 1 | time=521.04s | comm≈11.39 GB | calls=3481
+Level 2 | time=508.20s | comm≈12.32 GB | calls=3481
+Levels executed: [0, 1, 2]
+Final level: 2
+Predicted class index: 495

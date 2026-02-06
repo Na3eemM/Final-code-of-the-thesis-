@@ -1,0 +1,79 @@
+Date: Mon Jan 26 11:13:41 CET 2026
+Node: gcn44.local.snellius.surf.nl
+CPUs: 8
+Mon Jan 26 11:13:41 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.95.05              Driver Version: 580.95.05      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:31:00.0 Off |                    0 |
+| N/A   29C    P0             49W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+[plain] device=cpu
+[plain] level=0 sec/iter=0.1045 acc1=1.0
+[plain] level=1 sec/iter=0.1483 acc1=1.0
+[plain] level=2 sec/iter=0.1984 acc1=1.0
+[plain] wrote outputs/results_plain_idx0.csv
+[mpc] entered run_party()[mpc] entered run_party()
+
+/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/crypten/nn/onnx_converter.py:176: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  ../torch/csrc/utils/tensor_numpy.cpp:178.)
+  param = torch.from_numpy(numpy_helper.to_array(node))
+/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/crypten/nn/onnx_converter.py:176: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  ../torch/csrc/utils/tensor_numpy.cpp:178.)
+  param = torch.from_numpy(numpy_helper.to_array(node))
+[mpc] MPC ok: world_size=2, x_enc_type=MPCTensor, src=0
+[mpc] level=0 time=62.24s comm≈10.49GB calls=3481
+[mpc] level=1 time=67.79s comm≈11.39GB calls=3481
+[mpc] level=2 time=73.68s comm≈12.32GB calls=3481
+Process Process-1:
+Traceback (most recent call last):
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/crypten/mpc/context.py", line 30, in _launch
+    return_value = func(*func_args, **func_kwargs)
+  File "/gpfs/home2/nalmawaldi/FINAL_PROJECT/flexvit/secureD2_infer_crypten.py", line 365, in run_party
+    out = output_enc.get_plain_text()
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/crypten/mpc/mpc.py", line 175, in get_plain_text
+    return self._tensor.get_plain_text(dst=dst)
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/crypten/mpc/primitives/arithmetic.py", line 309, in get_plain_text
+    return self.encoder.decode(self.reveal(dst=dst))
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/crypten/mpc/primitives/arithmetic.py", line 300, in reveal
+    return comm.get().all_reduce(tensor)
+  File "/gpfs/home2/nalmawaldi/FINAL_PROJECT/flexvit/secureD2_infer_crypten.py", line 133, in all_reduce_wrapped
+    return orig_all_reduce(tensor, *args, **kwargs)
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/crypten/communicator/communicator.py", line 234, in logging_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/crypten/communicator/distributed_communicator.py", line 209, in all_reduce
+    dist.all_reduce(result.data, op=op, group=self.main_group)
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/torch/distributed/distributed_c10d.py", line 1321, in all_reduce
+    work.wait()
+RuntimeError: [../third_party/gloo/gloo/transport/tcp/pair.cc:598] Connection closed by peer [172.18.62.44]:9601
+ERROR:root:One of the parties failed. Check past logs

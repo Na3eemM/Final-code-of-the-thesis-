@@ -1,0 +1,81 @@
+Date: Fri Jan 23 17:00:46 CET 2026
+Node: gcn24.local.snellius.surf.nl
+CPUs: 8
+Fri Jan 23 17:00:46 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.95.05              Driver Version: 580.95.05      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:E3:00.0 Off |                    0 |
+| N/A   29C    P0             48W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Process Process-2:
+Process Process-1:
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/crypten/mpc/context.py", line 30, in _launch
+    return_value = func(*func_args, **func_kwargs)
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/crypten/mpc/context.py", line 30, in _launch
+    return_value = func(*func_args, **func_kwargs)
+  File "/gpfs/home2/nalmawaldi/FINAL_PROJECT/flexvit/secureD1_infer_crypten.py", line 315, in run_party
+    crypten_models[lvl] = build_crypten_model_for_level(lvl, verbose=False)
+  File "/gpfs/home2/nalmawaldi/FINAL_PROJECT/flexvit/secureD1_infer_crypten.py", line 315, in run_party
+    crypten_models[lvl] = build_crypten_model_for_level(lvl, verbose=False)
+  File "/gpfs/home2/nalmawaldi/FINAL_PROJECT/flexvit/secureD1_infer_crypten.py", line 245, in build_crypten_model_for_level
+    torch_model = build_flexvit(device=device, level=level, verbose=False)
+  File "/gpfs/home2/nalmawaldi/FINAL_PROJECT/flexvit/secureD1_infer_crypten.py", line 245, in build_crypten_model_for_level
+    torch_model = build_flexvit(device=device, level=level, verbose=False)
+  File "/gpfs/home2/nalmawaldi/FINAL_PROJECT/flexvit/secureD1_infer_crypten.py", line 174, in build_flexvit
+    ckpt = torch.load(CKPT_PATH, map_location=device)
+  File "/gpfs/home2/nalmawaldi/FINAL_PROJECT/flexvit/secureD1_infer_crypten.py", line 174, in build_flexvit
+    ckpt = torch.load(CKPT_PATH, map_location=device)
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/torch/serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/torch/serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/torch/serialization.py", line 231, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/torch/serialization.py", line 231, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/torch/serialization.py", line 212, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+  File "/home/nalmawaldi/.conda/envs/flexvit/lib/python3.9/site-packages/torch/serialization.py", line 212, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/nalmawaldi/FINAL_PROJECT/flexvit/pretrained/your_imagenet_checkpoint.pt'
+FileNotFoundError: [Errno 2] No such file or directory: '/home/nalmawaldi/FINAL_PROJECT/flexvit/pretrained/your_imagenet_checkpoint.pt'
+ERROR:root:One of the parties failed. Check past logs
